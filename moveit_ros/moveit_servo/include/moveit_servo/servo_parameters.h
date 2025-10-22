@@ -87,23 +87,11 @@ struct ServoParameters
   // std::string ee_frame_name{ "panda_link8" };
     // Properties of outgoing commands
   std::string command_out_topic{ "/fr3_arm_controller/joint_trajectory" };
-  double publish_period{ 0.034 };
-  std::string command_out_type{ "trajectory_msgs/JointTrajectory" };
-  bool publish_joint_positions{ true };
-  bool publish_joint_velocities{ true };
-  bool publish_joint_accelerations{ false };
-  // Plugins for smoothing outgoing commands
-  std::string joint_topic{ "/joint_states" };
-  std::string smoothing_filter_plugin_name{ "online_signal_smoothing::ButterworthFilterPlugin" };
   // MoveIt properties
   std::string move_group_name{ "fr3_arm" };
   std::string planning_frame{ "fr3_link0" };
   std::string ee_frame_name{ "fr3_hand_tcp" };
   std::string robot_link_command_frame{ "fr3_link0" };
-  bool is_primary_planning_scene_monitor = { true };
-  std::string monitored_planning_scene_topic{
-    planning_scene_monitor::PlanningSceneMonitor::DEFAULT_PLANNING_SCENE_TOPIC
-  };
 
   bool is_primary_planning_scene_monitor = { true };
   std::string monitored_planning_scene_topic{
